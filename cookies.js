@@ -8,18 +8,18 @@ app.use(express.json())
 
 app.use(cors({origin: 'http://localhost:3000', credentials: true}))
 
-app.post('')
 
-app.get('/login',(request,response) => { 
-    
-    username
-    response.cookie('username','')
-    console.log(cookies)
+
+app.post('/login',(request,response) => { 
+    let username = 'bob'
+    response.cookie('username',username)
+    response.end()
 })
 
 
 app.get('/hello',(request, response) => {
     response.cookie('username', username)
+    response.end()
 })
 
 
